@@ -1,0 +1,106 @@
+.container {
+  padding: 20px;
+  border: solid 2px black;
+}
+
+.header {
+  justify-content: space-between;
+  background-color: rgb(245, 174, 189);
+}
+
+.row {
+  padding: 10px;
+  margin: 10px;
+  border: solid 1px black;
+}
+
+.main {
+  justify-content: space-between;
+  /* position: fixed; */
+  height: 80vh;
+}
+
+.main__todo-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px black;
+}
+
+.main__todo-column-header {
+  background-color: rgb(144, 255, 218);
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__in-progress-column-header {
+  background-color: #dadada;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__done-column-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(173, 232, 255);
+}
+
+.main__delete-all-button {
+  background-color: rgb(173, 232, 255);
+  position: absolute;
+  bottom: 0px;
+}
+
+.main__delete-all-button:hover {
+  background-color: rgb(173, 232, 255);
+}
+
+.main__todo-add-button {
+  background-color: rgb(144, 255, 218);
+}
+
+.main__in-progress-column {
+  border: solid 1px black;
+}
+.main__done-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  border: solid 1px black;
+}
+
+.main__cards {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.main__card {
+  background-color: rgb(108, 161, 161);
+  border: solid 1px black;
+  margin: 10px 0;
+}
+
+#clock {
+  color: #000;
+  font-weight: bold;
+  /* font-size: 30px; */
+}
+
+.todo {
+  background-color: #90ffda;
+}
+
+.inProgress {
+  background-color: #dadada;
+}
+
+.done {
+  background-color: #ade8ff;
+}
+
+.main__add-task-button {
+  position: absolute;
+  bottom: 0px;
+}

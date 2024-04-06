@@ -1,0 +1,123 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/todo.js" type="module"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header row">
+        <div class="col-2">
+          <p>Trello</p>
+        </div>
+        <div class="col-2">
+          <div id="clock"></div>
+        </div>
+      </div>
+      <div class="main row h-300">
+        <div class="col-3 main__todo-column" id="todo">
+          <div class="main__todo-column-header">
+            <p>TODO:</p>
+          </div>
+          <div class="main__cards"></div>
+          <!-- Кнопка-триггер модального окна -->
+          <button
+            type="button"
+            class="btn btn-primary main__add-task-button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Add task
+          </button>
+          <!-- Модальное окно добавление задачи -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Add task</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Закрыть"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>Описание задачи</p>
+                  <form id="form" class="d-flex align-items-center w-100">
+                    <input type="text" class="form-control" id="input" />
+                    <button type="submit" class="btn btn-primary ms-3">
+                      Add
+                    </button>
+                  </form>
+                  <p>Исполнитель</p>
+                  <select class="form-select m-6" name="" id="selectUser">
+                    <p>123</p>
+                  </select>
+                  <p>Колонка</p>
+                  <select
+                    id="mySelect"
+                    class="form-select m-6"
+                    aria-label="Default select example"
+                  >
+                    <option
+                      selected
+                      value="todo"
+                      data-action="main__todo-column"
+                    >
+                      todo
+                    </option>
+                    <option
+                      value="inProgress"
+                      data-action="main__in-progress-column"
+                    >
+                      in-progress
+                    </option>
+                    <option value="done" data-action="main__done-column">
+                      done
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3 main__in-progress-column" id="inProgress">
+          <div class="main__in-progress-column-header">
+            <p>IN PROGRESS</p>
+            <div class="in-progress__counter" id="count">0</div>
+          </div>
+        </div>
+        <div class="col-3 main__done-column" id="done">
+          <div class="main__done-column-header">
+            <p>DONE</p>
+          </div>
+          <div class="col-3">
+            <button
+              class="btn main__delete-all-button"
+              data-action="deleteAll"
+              id="deleteAll"
+            >
+              Delete all
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
